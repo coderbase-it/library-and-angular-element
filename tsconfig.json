@@ -15,6 +15,12 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "paths": {
+      "star-rating": [
+        "dist/star-rating/star-rating",
+        "dist/star-rating"
+      ]
+    },
     "module": "es2020",
     "lib": [
       "es2018",

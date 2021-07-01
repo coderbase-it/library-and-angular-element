@@ -1,0 +1,10 @@
+
+  <ul class="stcomp">
+    <ng-container *ngFor="let number of arrayOfNumber">
+      <lib-star [dataRating]="number"
+      (mouseOverChanges)="mouseOverChanges($event)"
+      (mouseLeaveChanges)="mouseLeaveChanges($event)"
+      ></lib-star>
+    </ng-container>
+  </ul>
+

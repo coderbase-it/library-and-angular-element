@@ -1,0 +1,12 @@
+{
+  "name": "@coderbase/star-rating",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.2.14",
+    "@angular/core": "^11.2.14"
+  },
+  "private": false,
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

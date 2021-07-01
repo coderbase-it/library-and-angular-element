@@ -1,27 +1,40 @@
-# Myproject
+# Generate library 
+ng g library star-rating
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
+# Build library 
+ng build star-rating --prod
 
-## Development server
+# Publish library
+cd dist/star-rating
+npm publish --access public 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Demo usage of library in Stackblitz
+https://stackblitz.com/edit/angular-star-rating-library-usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Demo usage of Angular elements
+https://stackblitz.com/edit/web-platform-star-rating-wc-elements
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Angular Elements 
+ng g application elements
 
-## Running unit tests
+# Take advantage of ngx-build-plus
+ng add ngx-build-plus --project elements
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+# createCustomElement 
+const elm = createCustomElement(StarRatingComponent, { injector: this.injector });
+customElements.define('star-rating', elm);
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# build element
+ng build --prod --project elements --output-hashing none --single-bundle
 
-## Further help
+# Publish element
+initiate package.json on dist/elements 
+concat js files into one 
+cat ./dist/elements/{polyfills,main}.js > dist/elements/elements.js
+npm publish --access public 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Retrieve wc deployement file
+https://unpkg.com/@coderbase/star-rating.elements@1.0.0/elements.js

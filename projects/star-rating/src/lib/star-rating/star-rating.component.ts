@@ -16,6 +16,7 @@ export class StarRatingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Hello training')
     console.log(this.numberofstar)
     // array for ngFor
     for (let i= 0; i < +this.numberofstar  ; i++) {

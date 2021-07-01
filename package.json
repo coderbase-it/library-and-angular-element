@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "elements-build":"ng build elements --prod --output-hashing none --single-bundle",
-    "build:elements": "ng build --prod --project elements --output-hashing none --single-bundle && npm run pack:elements && cp projects/elements/package.json dist/elements",
+    "build:elements": "ng build --prod --project elements --output-hashing none --single-bundle true && npm run pack:elements && cp projects/elements/package.json dist/elements",
     "pack:elements": "cat ./dist/elements/{polyfills,main}.js > dist/elements/elements.js && ls -lah dist/elements/elements.js",
     "prepare-testing-elements": "cp dist/elements/elements.js testing-elements"
   },
